@@ -1,0 +1,1463 @@
+
+		<!DOCTYPE HTML>
+
+		<html>
+
+		<head>
+
+		<title>inApp</title>
+
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+
+		<link rel="stylesheet" href="css/styles.css" />
+
+		<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
+
+		</head>
+			
+		<body>
+				
+		<div id="utama" data-role="page" >
+
+			<div data-role="header" data-position="fixed">
+
+				<a href="#menu" data-icon="bars" data-transition="slide">Menu</a>
+
+				<h1>Ringkes App</h1>
+
+				<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+			</div>
+
+			<div data-role="content">
+				
+			</div>
+			
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+			<div data-role="footer"  data-position="fixed">
+
+				<div data-role="navbar" class="nav-glyphish-example">
+
+					<ul>
+
+						<li><a href="#setting" data-icon="gear" data-transition="slide">Setting</a></li>
+
+						<li><a href="#tentang" data-icon="star" data-transition="slide">Tentang</a></li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+			
+			<div id="menu" data-role="panel" data-position-fixed="true" data-theme="a">
+
+				<ul data-role="listview" data-filter="true" data-filter-placeholder="Cari..." class="nav-search ui-listview">
+
+				<li data-theme="b"><a href="#" data-rel="close">Kembali</a></li>
+				<li><a href="#gallery" data-transition="slide">gallery</a></li>
+				<li><a href="#gambar" data-transition="slide">gambar</a></li>
+				<li><a href="#hak" data-transition="slide">hak</a></li>
+				<li><a href="#jnsmenu" data-transition="slide">jnsmenu</a></li>
+				<li><a href="#jnsusr" data-transition="slide">jnsusr</a></li>
+				<li><a href="#letak" data-transition="slide">letak</a></li>
+				<li><a href="#link" data-transition="slide">link</a></li>
+				<li><a href="#media" data-transition="slide">media</a></li>
+				<li><a href="#post" data-transition="slide">post</a></li>
+				<li><a href="#winget" data-transition="slide">winget</a></li>
+		
+				<li><a href="#setting" data-transition="slide">Setting</a></li>
+
+				<li><a href="#tentang" data-transition="slide">Tentang</a></li>
+
+				<li data-icon="delete"><a href="#" id="close5">Keluar</a></li>
+	
+				</ul>
+
+			</div>
+
+		</div>
+	<div id="gallery" data-role="page" >
+
+			<div data-role="header" data-position="fixed">
+
+				<a href="#utama" id="back" data-icon="home" data-transition="slide">Beranda</a>
+
+				<h1>gallery</h1>
+
+				<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+			</div>
+
+
+			<div data-role="content">
+
+				<a href="#details_gallery" onclick="gallery_add()" data-role="button" data-icon="add" data-theme="b" data-trasition="slide">Buat Baru</a>
+
+				<label for="stats"><p> </p></label>
+
+				<ul id="listgallery" data-role="listview" data-filter="true" data-inset="true" data-iconpos="left" data-icon="edit"  data-split-theme="d" data-split-icon="delete"></ul>
+
+			</div>
+	
+			<div data-role="popup" id="popupMenu" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Hapus Data?</li> 
+
+					<li><a href="#" id="del">Hapus</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="popkeluar" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close_gallery">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	<div id="gambar" data-role="page" >
+
+			<div data-role="header" data-position="fixed">
+
+				<a href="#utama" id="back" data-icon="home" data-transition="slide">Beranda</a>
+
+				<h1>gambar</h1>
+
+				<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+			</div>
+
+
+			<div data-role="content">
+
+				<a href="#details_gambar" onclick="gambar_add()" data-role="button" data-icon="add" data-theme="b" data-trasition="slide">Buat Baru</a>
+
+				<label for="stats"><p> </p></label>
+
+				<ul id="listgambar" data-role="listview" data-filter="true" data-inset="true" data-iconpos="left" data-icon="edit"  data-split-theme="d" data-split-icon="delete"></ul>
+
+			</div>
+	
+			<div data-role="popup" id="popupMenu" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Hapus Data?</li> 
+
+					<li><a href="#" id="del">Hapus</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="popkeluar" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close_gambar">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	<div id="hak" data-role="page" >
+
+			<div data-role="header" data-position="fixed">
+
+				<a href="#utama" id="back" data-icon="home" data-transition="slide">Beranda</a>
+
+				<h1>hak</h1>
+
+				<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+			</div>
+
+
+			<div data-role="content">
+
+				<a href="#details_hak" onclick="hak_add()" data-role="button" data-icon="add" data-theme="b" data-trasition="slide">Buat Baru</a>
+
+				<label for="stats"><p> </p></label>
+
+				<ul id="listhak" data-role="listview" data-filter="true" data-inset="true" data-iconpos="left" data-icon="edit"  data-split-theme="d" data-split-icon="delete"></ul>
+
+			</div>
+	
+			<div data-role="popup" id="popupMenu" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Hapus Data?</li> 
+
+					<li><a href="#" id="del">Hapus</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="popkeluar" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close_hak">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	<div id="jnsmenu" data-role="page" >
+
+			<div data-role="header" data-position="fixed">
+
+				<a href="#utama" id="back" data-icon="home" data-transition="slide">Beranda</a>
+
+				<h1>jnsmenu</h1>
+
+				<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+			</div>
+
+
+			<div data-role="content">
+
+				<a href="#details_jnsmenu" onclick="jnsmenu_add()" data-role="button" data-icon="add" data-theme="b" data-trasition="slide">Buat Baru</a>
+
+				<label for="stats"><p> </p></label>
+
+				<ul id="listjnsmenu" data-role="listview" data-filter="true" data-inset="true" data-iconpos="left" data-icon="edit"  data-split-theme="d" data-split-icon="delete"></ul>
+
+			</div>
+	
+			<div data-role="popup" id="popupMenu" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Hapus Data?</li> 
+
+					<li><a href="#" id="del">Hapus</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="popkeluar" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close_jnsmenu">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	<div id="jnsusr" data-role="page" >
+
+			<div data-role="header" data-position="fixed">
+
+				<a href="#utama" id="back" data-icon="home" data-transition="slide">Beranda</a>
+
+				<h1>jnsusr</h1>
+
+				<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+			</div>
+
+
+			<div data-role="content">
+
+				<a href="#details_jnsusr" onclick="jnsusr_add()" data-role="button" data-icon="add" data-theme="b" data-trasition="slide">Buat Baru</a>
+
+				<label for="stats"><p> </p></label>
+
+				<ul id="listjnsusr" data-role="listview" data-filter="true" data-inset="true" data-iconpos="left" data-icon="edit"  data-split-theme="d" data-split-icon="delete"></ul>
+
+			</div>
+	
+			<div data-role="popup" id="popupMenu" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Hapus Data?</li> 
+
+					<li><a href="#" id="del">Hapus</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="popkeluar" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close_jnsusr">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	<div id="letak" data-role="page" >
+
+			<div data-role="header" data-position="fixed">
+
+				<a href="#utama" id="back" data-icon="home" data-transition="slide">Beranda</a>
+
+				<h1>letak</h1>
+
+				<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+			</div>
+
+
+			<div data-role="content">
+
+				<a href="#details_letak" onclick="letak_add()" data-role="button" data-icon="add" data-theme="b" data-trasition="slide">Buat Baru</a>
+
+				<label for="stats"><p> </p></label>
+
+				<ul id="listletak" data-role="listview" data-filter="true" data-inset="true" data-iconpos="left" data-icon="edit"  data-split-theme="d" data-split-icon="delete"></ul>
+
+			</div>
+	
+			<div data-role="popup" id="popupMenu" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Hapus Data?</li> 
+
+					<li><a href="#" id="del">Hapus</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="popkeluar" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close_letak">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	<div id="link" data-role="page" >
+
+			<div data-role="header" data-position="fixed">
+
+				<a href="#utama" id="back" data-icon="home" data-transition="slide">Beranda</a>
+
+				<h1>link</h1>
+
+				<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+			</div>
+
+
+			<div data-role="content">
+
+				<a href="#details_link" onclick="link_add()" data-role="button" data-icon="add" data-theme="b" data-trasition="slide">Buat Baru</a>
+
+				<label for="stats"><p> </p></label>
+
+				<ul id="listlink" data-role="listview" data-filter="true" data-inset="true" data-iconpos="left" data-icon="edit"  data-split-theme="d" data-split-icon="delete"></ul>
+
+			</div>
+	
+			<div data-role="popup" id="popupMenu" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Hapus Data?</li> 
+
+					<li><a href="#" id="del">Hapus</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="popkeluar" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close_link">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	<div id="media" data-role="page" >
+
+			<div data-role="header" data-position="fixed">
+
+				<a href="#utama" id="back" data-icon="home" data-transition="slide">Beranda</a>
+
+				<h1>media</h1>
+
+				<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+			</div>
+
+
+			<div data-role="content">
+
+				<a href="#details_media" onclick="media_add()" data-role="button" data-icon="add" data-theme="b" data-trasition="slide">Buat Baru</a>
+
+				<label for="stats"><p> </p></label>
+
+				<ul id="listmedia" data-role="listview" data-filter="true" data-inset="true" data-iconpos="left" data-icon="edit"  data-split-theme="d" data-split-icon="delete"></ul>
+
+			</div>
+	
+			<div data-role="popup" id="popupMenu" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Hapus Data?</li> 
+
+					<li><a href="#" id="del">Hapus</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="popkeluar" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close_media">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	<div id="post" data-role="page" >
+
+			<div data-role="header" data-position="fixed">
+
+				<a href="#utama" id="back" data-icon="home" data-transition="slide">Beranda</a>
+
+				<h1>post</h1>
+
+				<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+			</div>
+
+
+			<div data-role="content">
+
+				<a href="#details_post" onclick="post_add()" data-role="button" data-icon="add" data-theme="b" data-trasition="slide">Buat Baru</a>
+
+				<label for="stats"><p> </p></label>
+
+				<ul id="listpost" data-role="listview" data-filter="true" data-inset="true" data-iconpos="left" data-icon="edit"  data-split-theme="d" data-split-icon="delete"></ul>
+
+			</div>
+	
+			<div data-role="popup" id="popupMenu" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Hapus Data?</li> 
+
+					<li><a href="#" id="del">Hapus</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="popkeluar" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close_post">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	<div id="winget" data-role="page" >
+
+			<div data-role="header" data-position="fixed">
+
+				<a href="#utama" id="back" data-icon="home" data-transition="slide">Beranda</a>
+
+				<h1>winget</h1>
+
+				<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+			</div>
+
+
+			<div data-role="content">
+
+				<a href="#details_winget" onclick="winget_add()" data-role="button" data-icon="add" data-theme="b" data-trasition="slide">Buat Baru</a>
+
+				<label for="stats"><p> </p></label>
+
+				<ul id="listwinget" data-role="listview" data-filter="true" data-inset="true" data-iconpos="left" data-icon="edit"  data-split-theme="d" data-split-icon="delete"></ul>
+
+			</div>
+	
+			<div data-role="popup" id="popupMenu" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Hapus Data?</li> 
+
+					<li><a href="#" id="del">Hapus</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="popkeluar" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close_winget">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div id="details_gallery" data-role="page" data-add-back-btn="true">
+
+		<div data-role="header">
+
+			<a href="#" id="back" data-icon="back" data-rel="back">Kembali</a>
+
+			<h1>Form gallery</h1>
+
+			<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+		</div>
+
+		<div data-role="content">
+
+			<h2>Formulir</h2><form>
+
+				<div id="edit">
+
+		
+				<input type="hidden" name="gallery_id" id="gallery_id">
+				
+				<label for="text-basic">nama:</label>
+				<input type="text" name="gallery_nama" id="gallery_nama">
+				
+				<label for="text-basic">thumb:</label>
+				<textarea cols="40" rows="8" name="gallery_thumb" id="gallery_thumb"></textarea>
+				
+				<label for="text-basic">keterangan:</label>
+				<textarea cols="40" rows="8" name="gallery_keterangan" id="gallery_keterangan"></textarea>
+				
+				<label for="text-basic"></label>
+				<label for="select-choice-a" class="select">jnsusr:</label>
+				<select name="select-choice-a" id="jnsusr_jnsusr_id" data-native-menu="false">
+					<option>Pilih jnsusr</option>
+				</select>
+				
+				<input type="button" id="gallery_kirim" value="Simpan" data-icon="edit" data-theme="b" />
+
+				<input type="button" id="gallery_batal" value="Batal" data-icon="back" data-theme="a" onClick="kembali()"/>
+
+				<p id="status"><span style="font-size: 16px;"></span></p>
+
+			 
+			<ul id="actionList" data-role="listview" data-inset="true"></ul>
+
+			</form>
+
+			</div>
+
+		  </div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close4">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		
+		<div id="details_gambar" data-role="page" data-add-back-btn="true">
+
+		<div data-role="header">
+
+			<a href="#" id="back" data-icon="back" data-rel="back">Kembali</a>
+
+			<h1>Form gambar</h1>
+
+			<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+		</div>
+
+		<div data-role="content">
+
+			<h2>Formulir</h2><form>
+
+				<div id="edit">
+
+		
+				<input type="hidden" name="gambar_id" id="gambar_id">
+				
+				<label for="text-basic">nama:</label>
+				<input type="text" name="gambar_nama" id="gambar_nama">
+				
+				<label for="text-basic">file:</label>
+				<input type="text" name="gambar_file" id="gambar_file">
+				
+				<label for="text-basic">alt:</label>
+				<input type="text" name="gambar_alt" id="gambar_alt">
+				
+				<label for="text-basic">post:</label>
+				<input type="date" name="gambar_post" id="gambar_post">
+				
+				<label for="text-basic"></label>
+				<label for="select-choice-a" class="select">post:</label>
+				<select name="select-choice-a" id="post_post_id" data-native-menu="false">
+					<option>Pilih post</option>
+				</select>
+				
+				<input type="button" id="gambar_kirim" value="Simpan" data-icon="edit" data-theme="b" />
+
+				<input type="button" id="gambar_batal" value="Batal" data-icon="back" data-theme="a" onClick="kembali()"/>
+
+				<p id="status"><span style="font-size: 16px;"></span></p>
+
+			 
+			<ul id="actionList" data-role="listview" data-inset="true"></ul>
+
+			</form>
+
+			</div>
+
+		  </div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close4">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		
+		<div id="details_hak" data-role="page" data-add-back-btn="true">
+
+		<div data-role="header">
+
+			<a href="#" id="back" data-icon="back" data-rel="back">Kembali</a>
+
+			<h1>Form hak</h1>
+
+			<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+		</div>
+
+		<div data-role="content">
+
+			<h2>Formulir</h2><form>
+
+				<div id="edit">
+
+		
+				<input type="hidden" name="hak_id" id="hak_id">
+				
+				<fieldset data-role="controlgroup">
+					<legend>status:</legend>
+						<input type="checkbox" name="hak_status" id="hak_status-1" value="add">
+						<label for="hak_status-1">add</label>
+						
+						<input type="checkbox" name="hak_status" id="hak_status-2" value="update">
+						<label for="hak_status-2">update</label>
+						
+						<input type="checkbox" name="hak_status" id="hak_status-3" value="del">
+						<label for="hak_status-3">del</label>
+						
+						<input type="checkbox" name="hak_status" id="hak_status-4" value="read">
+						<label for="hak_status-4">read</label>
+						</fieldset>
+				<label for="text-basic"></label>
+				<label for="select-choice-a" class="select">jnsusr:</label>
+				<select name="select-choice-a" id="jnsusr_jnsusr_id" data-native-menu="false">
+					<option>Pilih jnsusr</option>
+				</select>
+				
+				<input type="button" id="hak_kirim" value="Simpan" data-icon="edit" data-theme="b" />
+
+				<input type="button" id="hak_batal" value="Batal" data-icon="back" data-theme="a" onClick="kembali()"/>
+
+				<p id="status"><span style="font-size: 16px;"></span></p>
+
+			 
+			<ul id="actionList" data-role="listview" data-inset="true"></ul>
+
+			</form>
+
+			</div>
+
+		  </div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close4">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		
+		<div id="details_jnsmenu" data-role="page" data-add-back-btn="true">
+
+		<div data-role="header">
+
+			<a href="#" id="back" data-icon="back" data-rel="back">Kembali</a>
+
+			<h1>Form jnsmenu</h1>
+
+			<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+		</div>
+
+		<div data-role="content">
+
+			<h2>Formulir</h2><form>
+
+				<div id="edit">
+
+		
+				<input type="hidden" name="jnsmenu_id" id="jnsmenu_id">
+				
+				<label for="text-basic">head:</label>
+				<input type="text" name="jnsmenu_head" id="jnsmenu_head">
+				
+				<label for="text-basic">nama:</label>
+				<input type="text" name="jnsmenu_nama" id="jnsmenu_nama">
+				
+				<label for="text-basic">keterangan:</label>
+				<textarea cols="40" rows="8" name="jnsmenu_keterangan" id="jnsmenu_keterangan"></textarea>
+				
+				<label for="text-basic">post:</label>
+				<input type="date" name="jnsmenu_post" id="jnsmenu_post">
+				
+				<label for="text-basic">file:</label>
+				<input type="text" name="jnsmenu_file" id="jnsmenu_file">
+				
+				<input type="hidden" name="users_id" id="users_id">
+				
+				<input type="button" id="jnsmenu_kirim" value="Simpan" data-icon="edit" data-theme="b" />
+
+				<input type="button" id="jnsmenu_batal" value="Batal" data-icon="back" data-theme="a" onClick="kembali()"/>
+
+				<p id="status"><span style="font-size: 16px;"></span></p>
+
+			 
+			<ul id="actionList" data-role="listview" data-inset="true"></ul>
+
+			</form>
+
+			</div>
+
+		  </div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close4">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		
+		<div id="details_jnsusr" data-role="page" data-add-back-btn="true">
+
+		<div data-role="header">
+
+			<a href="#" id="back" data-icon="back" data-rel="back">Kembali</a>
+
+			<h1>Form jnsusr</h1>
+
+			<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+		</div>
+
+		<div data-role="content">
+
+			<h2>Formulir</h2><form>
+
+				<div id="edit">
+
+		
+				<input type="hidden" name="jnsusr_id" id="jnsusr_id">
+				
+				<label for="text-basic">nama:</label>
+				<input type="text" name="jnsusr_nama" id="jnsusr_nama">
+				
+				<label for="text-basic">keterangan:</label>
+				<textarea cols="40" rows="8" name="jnsusr_keterangan" id="jnsusr_keterangan"></textarea>
+				
+				<input type="button" id="jnsusr_kirim" value="Simpan" data-icon="edit" data-theme="b" />
+
+				<input type="button" id="jnsusr_batal" value="Batal" data-icon="back" data-theme="a" onClick="kembali()"/>
+
+				<p id="status"><span style="font-size: 16px;"></span></p>
+
+			 
+			<ul id="actionList" data-role="listview" data-inset="true"></ul>
+
+			</form>
+
+			</div>
+
+		  </div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close4">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		
+		<div id="details_letak" data-role="page" data-add-back-btn="true">
+
+		<div data-role="header">
+
+			<a href="#" id="back" data-icon="back" data-rel="back">Kembali</a>
+
+			<h1>Form letak</h1>
+
+			<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+		</div>
+
+		<div data-role="content">
+
+			<h2>Formulir</h2><form>
+
+				<div id="edit">
+
+		
+				<input type="hidden" name="letak_id" id="letak_id">
+				
+				<label for="text-basic">nama:</label>
+				<input type="text" name="letak_nama" id="letak_nama">
+				
+				<label for="text-basic">keterangan:</label>
+				<textarea cols="40" rows="8" name="letak_keterangan" id="letak_keterangan"></textarea>
+				
+				<label for="text-basic"></label>
+				<label for="select-choice-a" class="select">jnsmenu:</label>
+				<select name="select-choice-a" id="jnsmenu_jnsmenu_id" data-native-menu="false">
+					<option>Pilih jnsmenu</option>
+				</select>
+				
+				<input type="button" id="letak_kirim" value="Simpan" data-icon="edit" data-theme="b" />
+
+				<input type="button" id="letak_batal" value="Batal" data-icon="back" data-theme="a" onClick="kembali()"/>
+
+				<p id="status"><span style="font-size: 16px;"></span></p>
+
+			 
+			<ul id="actionList" data-role="listview" data-inset="true"></ul>
+
+			</form>
+
+			</div>
+
+		  </div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close4">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		
+		<div id="details_link" data-role="page" data-add-back-btn="true">
+
+		<div data-role="header">
+
+			<a href="#" id="back" data-icon="back" data-rel="back">Kembali</a>
+
+			<h1>Form link</h1>
+
+			<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+		</div>
+
+		<div data-role="content">
+
+			<h2>Formulir</h2><form>
+
+				<div id="edit">
+
+		
+				<input type="hidden" name="link_id" id="link_id">
+				
+				<label for="text-basic">address:</label>
+				<input type="text" name="link_address" id="link_address">
+				
+				<label for="text-basic">nama:</label>
+				<input type="text" name="link_nama" id="link_nama">
+				
+				<label for="text-basic">keterangan:</label>
+				<input type="text" name="link_keterangan" id="link_keterangan">
+				
+				<label for="text-basic"></label>
+				<label for="select-choice-a" class="select">jnsusr:</label>
+				<select name="select-choice-a" id="jnsusr_jnsusr_id" data-native-menu="false">
+					<option>Pilih jnsusr</option>
+				</select>
+				
+				<input type="button" id="link_kirim" value="Simpan" data-icon="edit" data-theme="b" />
+
+				<input type="button" id="link_batal" value="Batal" data-icon="back" data-theme="a" onClick="kembali()"/>
+
+				<p id="status"><span style="font-size: 16px;"></span></p>
+
+			 
+			<ul id="actionList" data-role="listview" data-inset="true"></ul>
+
+			</form>
+
+			</div>
+
+		  </div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close4">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		
+		<div id="details_media" data-role="page" data-add-back-btn="true">
+
+		<div data-role="header">
+
+			<a href="#" id="back" data-icon="back" data-rel="back">Kembali</a>
+
+			<h1>Form media</h1>
+
+			<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+		</div>
+
+		<div data-role="content">
+
+			<h2>Formulir</h2><form>
+
+				<div id="edit">
+
+		
+				<input type="hidden" name="media_id" id="media_id">
+				
+				<label for="text-basic">nama:</label>
+				<input type="text" name="media_nama" id="media_nama">
+				
+				<label for="text-basic">file:</label>
+				<input type="text" name="media_file" id="media_file">
+				
+				<label for="text-basic">alt:</label>
+				<input type="text" name="media_alt" id="media_alt">
+				
+				<label for="text-basic">post:</label>
+				<input type="date" name="media_post" id="media_post">
+				
+				<label for="text-basic"></label>
+				<label for="select-choice-a" class="select">post:</label>
+				<select name="select-choice-a" id="post_post_id" data-native-menu="false">
+					<option>Pilih post</option>
+				</select>
+				
+				<input type="button" id="media_kirim" value="Simpan" data-icon="edit" data-theme="b" />
+
+				<input type="button" id="media_batal" value="Batal" data-icon="back" data-theme="a" onClick="kembali()"/>
+
+				<p id="status"><span style="font-size: 16px;"></span></p>
+
+			 
+			<ul id="actionList" data-role="listview" data-inset="true"></ul>
+
+			</form>
+
+			</div>
+
+		  </div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close4">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		
+		<div id="details_post" data-role="page" data-add-back-btn="true">
+
+		<div data-role="header">
+
+			<a href="#" id="back" data-icon="back" data-rel="back">Kembali</a>
+
+			<h1>Form post</h1>
+
+			<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+		</div>
+
+		<div data-role="content">
+
+			<h2>Formulir</h2><form>
+
+				<div id="edit">
+
+		
+				<input type="hidden" name="post_id" id="post_id">
+				
+				<label for="text-basic">author:</label>
+				<input type="text" name="post_author" id="post_author">
+				
+				<label for="text-basic">date:</label>
+				<input type="date" name="post_date" id="post_date">
+				
+				<label for="text-basic">date:</label>
+				<input type="date" name="post_date_edit" id="post_date_edit">
+				
+				<label for="text-basic">nama:</label>
+				<input type="text" name="post_nama" id="post_nama">
+				
+				<label for="text-basic">content:</label>
+				<textarea cols="40" rows="8" name="post_content" id="post_content"></textarea>
+				
+				<label for="text-basic">keywords:</label>
+				<input type="text" name="post_keywords" id="post_keywords">
+				
+				<label for="text-basic">status:</label>
+				<input type="text" name="post_status" id="post_status">
+				
+				<label for="text-basic">tag:</label>
+				<input type="text" name="post_tag" id="post_tag">
+				
+				<label for="text-basic">picture:</label>
+				<input type="text" name="post_picture" id="post_picture">
+				
+				<input type="button" id="post_kirim" value="Simpan" data-icon="edit" data-theme="b" />
+
+				<input type="button" id="post_batal" value="Batal" data-icon="back" data-theme="a" onClick="kembali()"/>
+
+				<p id="status"><span style="font-size: 16px;"></span></p>
+
+			 
+			<ul id="actionList" data-role="listview" data-inset="true"></ul>
+
+			</form>
+
+			</div>
+
+		  </div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close4">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		
+		<div id="details_winget" data-role="page" data-add-back-btn="true">
+
+		<div data-role="header">
+
+			<a href="#" id="back" data-icon="back" data-rel="back">Kembali</a>
+
+			<h1>Form winget</h1>
+
+			<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+		</div>
+
+		<div data-role="content">
+
+			<h2>Formulir</h2><form>
+
+				<div id="edit">
+
+		
+				<input type="hidden" name="winget_id" id="winget_id">
+				
+				<label for="text-basic">nama:</label>
+				<input type="text" name="winget_nama" id="winget_nama">
+				
+				<label for="text-basic">file:</label>
+				<textarea cols="40" rows="8" name="winget_file" id="winget_file"></textarea>
+				
+				<label for="text-basic">status:</label>
+				<input type="text" name="winget_status" id="winget_status">
+				
+				<label for="text-basic">posisi:</label>
+				<input type="text" name="winget_posisi" id="winget_posisi">
+				
+				<label for="text-basic">keterangan:</label>
+				<textarea cols="40" rows="8" name="winget_keterangan" id="winget_keterangan"></textarea>
+				
+				<label for="text-basic"></label>
+				<label for="select-choice-a" class="select">jnsusr:</label>
+				<select name="select-choice-a" id="jnsusr_jnsusr_id" data-native-menu="false">
+					<option>Pilih jnsusr</option>
+				</select>
+				
+				<input type="button" id="winget_kirim" value="Simpan" data-icon="edit" data-theme="b" />
+
+				<input type="button" id="winget_batal" value="Batal" data-icon="back" data-theme="a" onClick="kembali()"/>
+
+				<p id="status"><span style="font-size: 16px;"></span></p>
+
+			 
+			<ul id="actionList" data-role="listview" data-inset="true"></ul>
+
+			</form>
+
+			</div>
+
+		  </div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li>
+
+					<li><a href="#" id="close4">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+				
+		<div id="tentang" data-role="page" >
+
+			<div data-role="header" data-position="fixed">
+
+				<a href="#utama" data-icon="home" data-transition="slide">Beranda</a>
+
+				<h1>Tentang</h1>
+
+				<a href="#keluar" data-icon="delete" data-rel="popup">Tutup</a>
+
+			</div>
+
+			<div data-role="content">
+
+				 <ul data-role="listview" data-inset="true">
+
+					<li data-role="list-divider">Tentang Aplikasi <span class="ui-li-count">1</span></li>
+
+					<li><a href="#utama" data-transition="slide">
+
+					<h2>In Wahyu Widodo</h2>
+
+					<p><strong>Aplikasi setting website, Versi 1.0.2</strong></p>
+
+					<p>founder Ringkes.com, PHP CodeIgniter Programmer, Javascript Backbone and JQuery Mobile Programmer.</p>
+
+						<p class="ui-li-aside"><strong>copy&copy;</strong>2014</p>
+
+					</a></li>
+
+					<li><a href="#utama" data-transition="slide">
+
+					<h2>Platform Android Minimal</h2>
+
+					<p><strong>Persyaratan untuk penggunaan aplikasi ini</strong></p>
+
+					<p>Android 2.1, API level 7</p>
+
+						<p class="ui-li-aside"><strong></strong></p>
+
+					</a></li>
+
+					<li data-role="list-divider">Detail Developer, Technical Aspect <span class="ui-li-count">2</span></li>
+
+					<li><a href="#utama" data-transition="slide">
+
+					<h2>Tool Pembuatan</h2>
+
+					<p><strong>Pembuatan Aplikasi ini menggunakan 2 tool,</strong></p>
+
+					<p>Eclipse v22.0.4-741630 dan notepad++ versi 6.1.5</p>
+
+						<p class="ui-li-aside"><strong>27:2</strong>:14</p>
+
+					</a></li>
+
+					<li><a href="#utama" data-transition="slide">
+
+					<h2>Framework</h2>
+
+					<p><strong>Pembuatan Aplikasi ini menggunakan JavaScript,</strong></p>
+
+					<p>JQuery jquery.mobile-1.3.2.min, HTML5 dengan phonegap 2</p>
+
+						<p class="ui-li-aside"><strong>27:2</strong>:14</p>
+
+					</a></li>
+
+				</ul>
+
+			</div>
+
+			<div data-role="popup" id="keluar" data-theme="d">
+
+				<ul id="pop" data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="e">Keluar?</li> 
+
+					<li><a href="#" id="close1">Ya</a></li>
+
+					<li><a href="#" data-rel="back">Batal</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="../cordova.js"></script>
+
+		<script src="lib/jquery.min.js"></script>
+
+		<script src="lib/jquery.mobile-1.3.2.min.js"></script>
+
+		<script src="js/global.js"></script>
+
+		<script src="js/sitesetting.js"></script>
+
+		<script src="js/gallerydetails.js"></script>
+
+		<script src="js/gallery.js"></script>
+
+		<script src="js/gambardetails.js"></script>
+
+		<script src="js/gambar.js"></script>
+
+		<script src="js/hakdetails.js"></script>
+
+		<script src="js/hak.js"></script>
+
+		<script src="js/jnsmenudetails.js"></script>
+
+		<script src="js/jnsmenu.js"></script>
+
+		<script src="js/jnsusrdetails.js"></script>
+
+		<script src="js/jnsusr.js"></script>
+
+		<script src="js/letakdetails.js"></script>
+
+		<script src="js/letak.js"></script>
+
+		<script src="js/linkdetails.js"></script>
+
+		<script src="js/link.js"></script>
+
+		<script src="js/mediadetails.js"></script>
+
+		<script src="js/media.js"></script>
+
+		<script src="js/postdetails.js"></script>
+
+		<script src="js/post.js"></script>
+
+		<script src="js/wingetdetails.js"></script>
+
+		<script src="js/winget.js"></script>
+
+		</body>
+
+		</html>

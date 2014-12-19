@@ -1,0 +1,23 @@
+#actionList {
+	clear: both;
+}
+.ui-panel-animate.ui-panel-content-wrap{
+/*#utama div .ui-body-c .ui-panel-animate {*/
+    background: url("../pics/hd.jpg");
+    background-repeat:repeat;
+    background-position:center center;
+	background-size:cover;
+	/*background-size:100% 100%;*/
+}
+
+.ui-icon-myapp-pen {
+	background-image: url("../pics/187-pencil.png");
+	background-size: 18px 18px;
+}
+
+.ui-grid-a {
+    margin-top: 1em;
+    padding-top: .8em;
+    margin-top: 1.4em;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
